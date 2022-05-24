@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
           SmoothPageIndicator(
             controller: _controller, 
             count: 2,
-            effect: ExpandingDotsEffect(
+            effect: WormEffect(
               activeDotColor: Colors.blue,//------------COLOR DEL SELECTOR-----------------
               dotColor: Colors.brown,//----------------COLOR DE LA SIGUIENTE PAGINA------------
               dotHeight: 30,

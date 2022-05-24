@@ -7,7 +7,7 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: Padding(
+      body: Padding(//------------------SIN SAFE AREA----------------------
         padding: const EdgeInsets.all(40.0),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),

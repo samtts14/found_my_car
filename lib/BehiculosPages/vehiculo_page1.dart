@@ -7,7 +7,7 @@ class Page1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: SafeArea(
+      body: SafeArea(//----------------------CON SAFE AREA-------------------
         //padding: const EdgeInsets.all(20.0),
         child: Container(color: Colors.red),
       ),
