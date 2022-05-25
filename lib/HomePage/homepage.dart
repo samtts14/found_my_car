@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blueGrey[900],
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -25,15 +25,16 @@ class HomePage extends StatelessWidget {
             ),
           ),
           SmoothPageIndicator(
+            // -------------Indicador--------------
             controller: _controller,
             count: 2,
             effect: ExpandingDotsEffect(
-              activeDotColor:
-                  Colors.blue, //------------COLOR DEL SELECTOR-----------------
-              dotColor: Colors
-                  .brown, //----------------COLOR DE LA SIGUIENTE PAGINA------------
-              dotHeight: 30,
-              dotWidth: 30,
+              activeDotColor: Colors
+                  .amberAccent, //------------COLOR DEL SELECTOR-----------------
+              dotColor: Color.fromARGB(255, 224, 84,
+                  42), //----------------COLOR DE LA SIGUIENTE PAGINA------------
+              dotHeight: 15,
+              dotWidth: 15,
               spacing: 16,
             ),
           ),
