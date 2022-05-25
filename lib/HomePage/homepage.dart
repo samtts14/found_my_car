@@ -10,35 +10,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey[900],
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          // Page View
-          SizedBox(
-            height: 500,
-            child: PageView(
-              controller: _controller,
-              children: const [
-                Page1(),
-                Page2(),
-              ],
-            ),
+      body: SafeArea(
+        child: PageView(
+          controller: _controller,
+                children:  [
+                  Page1(),
+                  Page2(),
+             ],
           ),
-          SmoothPageIndicator(
-            // -------------Indicador--------------
-            controller: _controller,
-            count: 2,
-            effect: ExpandingDotsEffect(
-              activeDotColor: Colors
-                  .amberAccent, //------------COLOR DEL SELECTOR-----------------
-              dotColor: Color.fromARGB(255, 224, 84,
-                  42), //----------------COLOR DE LA SIGUIENTE PAGINA------------
-              dotHeight: 15,
-              dotWidth: 15,
-              spacing: 16,
-            ),
-          ),
-        ],
+          top: true,
+          bottom: true,
+          left: true,
+          right: true,
       ),
     );
   }

@@ -8,7 +8,7 @@ class Page2 extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Padding(
-        padding: const EdgeInsets.all(40.0),
+        padding: const EdgeInsets.all(10),//Tamano del padding en cada pantalla
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: Container(
