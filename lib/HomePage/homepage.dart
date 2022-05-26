@@ -9,6 +9,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar( 
+        /*actions: [
+          IconButton(
+        icon: Image.asset('assets/Images/logoCF'),
+        onPressed: () {},
+      ),
+        ],  */    
+        leading: IconButton(onPressed: (){}, icon: Icon(Icons.menu)),
+        elevation: 0,
+        backgroundColor: Colors.blueGrey[900],
+      ),
       backgroundColor: Colors.blueGrey[900],
       body: Stack(
         children: [
@@ -20,19 +31,23 @@ class HomePage extends StatelessWidget {
             ],
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,//posicion del dot
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 padding: const EdgeInsets.all(10),
                 child: Center(
-                  child: SmoothPageIndicator(
+                  child: SmoothPageIndicator(//---------------------INDICADOR----------------------------
                       controller: _controller,
                       count: 2,
-                      effect: WormEffect(),
-                      onDotClicked: (Index) => _controller.animateToPage(Index,
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.easeInCubic)),
+                      effect: ExpandingDotsEffect(
+                        activeDotColor: Color.fromARGB(255, 255, 106, 7),
+                        dotColor: Colors.amber,
+                        dotHeight: 10,
+                        dotWidth: 10,
+                        spacing: 10
+                      ),
+                    ),
                 ),
               )
             ],
