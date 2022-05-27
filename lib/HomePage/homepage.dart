@@ -9,14 +9,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
-        /*actions: [
-          IconButton(
-        icon: Image.asset('assets/Images/logoCF'),
-        onPressed: () {},
-      ),
-        ],  */    
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.menu)),
+      appBar: AppBar(
+        title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Image.asset('assets/Images/logoCF.png',
+              fit: BoxFit.contain, height: 90),
+        ]),
+        /*  leading: Container(
+          child: IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.menu),
+            alignment: Alignment.centerLeft,
+          ),
+        ),*/
         elevation: 0,
         backgroundColor: Colors.blueGrey[900],
       ),
@@ -31,23 +35,23 @@ class HomePage extends StatelessWidget {
             ],
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.end,//posicion del dot
+            mainAxisAlignment: MainAxisAlignment.end, //posicion del dot
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 padding: const EdgeInsets.all(10),
                 child: Center(
-                  child: SmoothPageIndicator(//---------------------INDICADOR----------------------------
-                      controller: _controller,
-                      count: 2,
-                      effect: ExpandingDotsEffect(
+                  child: SmoothPageIndicator(
+                    //---------------------INDICADOR----------------------------
+                    controller: _controller,
+                    count: 2,
+                    effect: ExpandingDotsEffect(
                         activeDotColor: Color.fromARGB(255, 255, 106, 7),
                         dotColor: Colors.amber,
                         dotHeight: 10,
                         dotWidth: 10,
-                        spacing: 10
-                      ),
-                    ),
+                        spacing: 10),
+                  ),
                 ),
               )
             ],
