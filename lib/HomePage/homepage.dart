@@ -24,6 +24,12 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.blueGrey[900],
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        
+      },
+        child: Icon(Icons.add, color: Colors.black,),
+        backgroundColor: Colors.amber,
+      ),
       backgroundColor: Colors.blueGrey[900],
       body: Stack(
         children: [
