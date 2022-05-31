@@ -12,8 +12,9 @@ class Page1 extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: Container(
-            color: Colors.blueGrey[700],
-          ),
+            color: Colors.blueGrey[700],     
+             // child: ElevatedButton(onPressed: null, child: Text('b')),    
+         ),      
         ),
       ),
     );
