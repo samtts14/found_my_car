@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:found_my_car/FormularioVehiculos/addvehiculos.dart';
+//import 'package:found_my_car/FormularioVehiculos/addvehiculos.dart';
 import 'package:found_my_car/VehiculosPages/vehiculo_page1.dart';
 import 'package:found_my_car/VehiculosPages/vehiculo_page2.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -19,9 +19,9 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blueGrey[900],
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {//---------------------BOTON FLOTANTE-----------------
-        Navigator.push(context, MaterialPageRoute(builder: ((context) => AddVehiculo())));
+      //  Navigator.push(context, MaterialPageRoute(builder: ((context) => AddVehiculo())));
       },
-        child: Icon(Icons.add, color: Colors.black,),
+        child: Icon(Icons.save, color: Colors.black,),
         backgroundColor: Colors.amber,
        // shape: BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
       ),

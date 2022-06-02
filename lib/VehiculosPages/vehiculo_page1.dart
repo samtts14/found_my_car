@@ -1,3 +1,5 @@
+//import 'dart:js';
+
 import 'package:flutter/material.dart';
 
 class Page1 extends StatelessWidget {
@@ -5,18 +7,61 @@ class Page1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.transparent,
-      body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: Container(
-            color: Colors.blueGrey[700],     
-             // child: ElevatedButton(onPressed: null, child: Text('b')),    
-         ),      
-        ),
-      ),
+    return Column(
+     children: [
+       SizedBox(
+         height: 20,
+       ),
+       
+       Row(//-----------------------ROW PARA LOS INPUT--------------------------
+         children: [
+           Container(
+             width: MediaQuery.of(context).size.width * 0.5,
+             child: _inputName(),
+           ),
+           Container(
+             width: MediaQuery.of(context).size.width* 0.5,
+             child: _inputGPSnumber(),
+           ),
+         ],
+       )
+     ],   
     );
+  }
+
+  Container _inputName() { //-----------------------------------------FORM FIELD----------------------
+    return Container( decoration: BoxDecoration(
+       borderRadius: BorderRadius.circular(20),
+       border: Border.all(color: Colors.blueGrey)),
+       padding: const EdgeInsets.symmetric(horizontal: 15),
+       margin: const EdgeInsets.symmetric(horizontal: 15),
+       child: TextFormField(
+         style: TextStyle(fontSize: 20, color: Colors.white),
+         decoration: const InputDecoration(
+           hintText: "Vehículo.",
+          //fillColor: Color.fromARGB(255, 55, 86, 102),    
+         // filled: true,     
+           border: InputBorder.none,
+         
+         ),
+       ),
+
+      );
+  }
+  Container _inputGPSnumber() {
+    return Container( decoration: BoxDecoration(
+       borderRadius: BorderRadius.circular(20),
+       border: Border.all(color: Colors.blueGrey)),
+       padding: const EdgeInsets.symmetric(horizontal: 15),
+       margin: const EdgeInsets.symmetric(horizontal: 15),
+       child: TextFormField(
+         keyboardType: TextInputType.number,
+         style: TextStyle(fontSize: 20),
+         decoration: const InputDecoration(
+            hintText: "Número GPS.",
+            border: InputBorder.none),
+       ),
+
+      );
   }
 }
